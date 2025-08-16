@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Optional: app base styles */
+html, body, #root { height: 100%; }
+body { color: var(--color-slate-900); background: var(--color-slate-50); }
+
+/* v4: você pode customizar design tokens direto no CSS via @theme */
+@theme {
+  /* fonts */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  /* brand colors (exemplo) */
+  --color-brand-600: #2563eb;
+  --color-brand-500: #3b82f6;
+}
+
+/* Exemplo de util customizada (opcional) */
+.btn {
+  @apply inline-flex items-center rounded-lg px-4 py-2 text-sm font-semibold shadow-sm;
+}
+.btn-primary {
+  @apply text-white bg-[var(--color-brand-600)] hover:bg-[var(--color-brand-500)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-brand-600)] focus-visible:ring-offset-2;
+}

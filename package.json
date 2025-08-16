@@ -1,0 +1,19 @@
+{
+    "name": "rentredi-test",
+    "private": true,
+    "workspaces": [
+        "server",
+        "web"
+    ],
+    "scripts": {
+        "dev:api": "npm --workspace server run dev",
+        "dev:web": "npm --workspace web run dev",
+        "dev": "concurrently -n API,WEB -c auto \"npm:dev:api\" \"npm:dev:web\"",
+        "build": "npm -w web run build",
+        "test": "npm -ws --if-present run test",
+        "lint": "echo \"(add lint scripts if you want)\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.0.0"
+    }
+}
