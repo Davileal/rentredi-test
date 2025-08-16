@@ -92,7 +92,6 @@ rentredi/
 
 - Node.js 22
 - A Firebase project with Realtime Database enabled
-- (Optional) An OpenWeather API key (we include the provided key; you can override via env)
 
 ### 1) Install dependencies (root)
 
@@ -116,17 +115,10 @@ Place your Firebase service account at:
 ```bash
 server/serviceAccountKey.json
 ```
-Never commit this file. In production, load it via secrets manager or env-based JSON.
 
 ### 3) Frontend configuration (web/)
 
 For dev, no env required thanks to Vite proxy.
-For production builds, you can set:
-
-```bash
-web/.env
-VITE_API_BASE_URL=https://api.your-domain.com
-```
 
 ## ▶️ Run (dev)
 
